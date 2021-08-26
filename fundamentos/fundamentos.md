@@ -145,7 +145,7 @@ Nan = Not a Number
 
 ---
 
-### objeto Math
+## objeto Math
 
 - objeto Math relacionado à matemática
 - objeto com valor do pi: Math.PI
@@ -153,7 +153,7 @@ Nan = Not a Number
 
 ---
 
-### string 
+## string 
 
 - cadeias de caracteres
 - aspas duplas, aspas simples ou crase (2015 pra cá)
@@ -167,7 +167,7 @@ Nan = Not a Number
 - string.replace: troca o caracter do índice informado pelo valor do segundo parâmetro. 1º parametro pode ser uma expressão regular
 - string.split(separador): gera array a partir de uma string, dividindo-a no(s) caracter(es) separador. Da pra usar regex também. 
 
-### template strings
+## template strings
 
 - forma mais fácil de concatenar variáveis em strings. Disponível a partir de 2015
 - usar crase ao invés de aspas simples ou duplas na string
@@ -176,7 +176,7 @@ Nan = Not a Number
 
 --- 
 
-### boolean 
+## boolean 
 
 - aceita literal: true, false 
 - aceita numeros inteiros: se for zero é false
@@ -187,7 +187,7 @@ Nan = Not a Number
 
 ---
 
-### array
+## array
 
 - agrupamento de valores de forma linear através de um único identificador, acessados por índices 
 - tal como em outras linguagens, o 1° índice é 0
@@ -201,7 +201,7 @@ Nan = Not a Number
 - recomendado trabalhar com um só tipo por array, apesar de permitir misturar 
 - acessar indice com item inexistente retorna undefined
 
-### object
+## object
 
 - confusão entre objeto e JSON (JS Object Notation). Um objeto em JS não é a mesma coisa que o JSON, apesar de ser parecido. JSON é um formato textual. Objeto é um tipo de dados da linguagem JS
 - coleção de chave valor
@@ -214,7 +214,7 @@ Nan = Not a Number
 
 ---
 
-### null e undefined
+## null e undefined
 
 - atribuição por referência: aponta para o endereço de memória. Mais de uma variável pode apontar para esse mesmo objeto e alterar em um deles altera em todos
 - atribuição por valor: troca o valor, mas não o mesmo objeto em si; mudar em uma variável não muda nas outras. 
@@ -226,7 +226,7 @@ Nan = Not a Number
 
 ---
 
-### quase tudo é função
+## quase tudo é função
 
 - "se JS fosse um país, a função seria o presidente"
 - Object (o maiusculo) é uma função. Instanciar um objeto é instanciar uma função
@@ -234,7 +234,7 @@ Nan = Not a Number
 - entender função é a base
 - função pode ter atributos, pode ter outras funções... Pode atribuir função pra variável, passar função como parâmetro de outra função...
 
-### exemplos de função 
+## exemplos de função 
 
 - não precisa ser explicito o que vai ou se vai retornar 
 - função é uma ação delimitada por bloco onde estão as sentenças de código. É como uma receita de bolo que pode ser reutilizada.
@@ -247,9 +247,9 @@ Nan = Not a Number
 
 ---
 
-### declaração de variáveis
+## declaração de variáveis
 
-#### var 
+### var 
 
 - usando var: declarar variavel dentro de bloco faz ela ser visivel mesmo fora dos blocos (se não for função)
 - no caso da função isso não é verdade. declarar com var dentro dela faz com que só seja visível na função
@@ -257,17 +257,17 @@ Nan = Not a Number
 - evitar variáveis com escopo global: apesar de poder acessar em qualquer lugar da aplicação, pode gerar erros dificeis de identificar, como vários lugares usando o mesmo nome de variável
 - escopo: ou é escopo global (visivel a todos) ou é escopo de função. 
 
-#### let 
+### let 
 
 - let tem escopos diferentes em bloco, diferente do var: visivel apenas dentro do bloco. Escopo global, escopo de função e escopo de bloco
 
-#### var em loop 
+### var em loop 
 
 - por não ter escopo de bloco, pode ser acessado a variável do for fora dele
 - ela terá o valor que fez sair do laço: i<100, então seria 100
 - no exemplo em que preenchemos um array com funções que em teoria se alteram de acordo com a variável i de um laço, isso não ocorre, e todas as funções dentro da lista retornam o mesmo valor, o último que fez sair do laço
 
-#### let em loop
+### let em loop
 
 - tem escopo de bloco 
 - tentar usar a variavel do for fora do for gera erro 
@@ -275,7 +275,7 @@ Nan = Not a Number
 
 ---
 
-### hoisting
+## hoisting
 
 - "içar" ou jogar pra cima
 - quando temos uma declaração e atribuição abaixo de uma sentença de código que usa essa variável, o JS, para evitar erros, joga a declaração (não a atribuição) acima do contexto, de forma que não gere um erro, apenas aplique undefined à variável
@@ -290,7 +290,7 @@ Nan = Not a Number
 
 ---
 
-### função vs objeto
+## função vs objeto
 
 - se função é o presidente, então objeto é o vice presidente
 - relembrando: classe é por baixo dos panos função. É só um detalhe de sintaxe
@@ -302,7 +302,7 @@ Nan = Not a Number
 
 ---
 
-### par nome/valor
+## par nome/valor
 
 - objeto possuem pares do tipo chave e valor 
 - contexto léxico: lugar onde uma variável é definida fisicamente no código. Ex: num browser seria no objeto window para uma var global. Funções são contextos mais estritos 
@@ -311,7 +311,7 @@ Nan = Not a Number
 
 ---
 
-### notação ponto
+## notação ponto
 
 - acessar membros de função, objeto... por meio do ponto. Ex: Math.PI, aluno.classe, mario.pular()
 - usado em objetos do próprio JS, como o console, window, Math...
@@ -321,19 +321,21 @@ Nan = Not a Number
 
 ---
 
-### atribuição 
+## atribuição 
 
 - colocar um valor numa variavel 
 - é possível usar operadores em conjunto com o =, tal como no python
 - +=, -=, *=, /=, %=... 
 - es7 trouxe o **= para exponenciação: a = 2; a **= 3 // a vale 8 
 
-### destructuring 
+---
+
+## destructuring 
 
 - desestruturação: tira algo da estrutura (objeto, array)
 - duas formas de escrita, dependendo se é objeto ou array
 
-#### objeto 
+### objeto 
 
 - podemos desestruturar atributos que passam a existir fora do objeto como variáveis, podendo usar o mesmo identificador ou passar um novo com o ':'
 - podemos atrubuir um valor padrão para caso não seja encontrado nada no objeto ('=')
@@ -341,7 +343,7 @@ Nan = Not a Number
 - ao acessar algo aninhado você deve ter certeza que o caminho existe, pois apenas o último dado pode ser nulo ou undefined
 
 
-#### array
+### array
 
 - usar com [variaveis] = array; 
 - a variável pode ser mais de uma, ficando undefined se estiver fora de alcance
@@ -354,7 +356,7 @@ Nan = Not a Number
 - também é possível usar valor padrão com o '='
 - é possível fazer de forma aninhada também, ainda que não recomendado quando fica dificil de ler
 
-#### função 
+### função 
 
 - quando se tem um parâmetro objeto, pode-se desestruturá-lo direto nos parâmetros
 - é possível usar valor padrão tanto na desestruturação, quanto no fora dela, para ter algo caso não seja pssado um objeto 
@@ -372,7 +374,9 @@ Nan = Not a Number
         // a fazer sentido
         if (min > max) [ min, max ] = [ max , min ]
 
-### operadores aritméticos
+---
+
+## operadores aritméticos
 
 - resultam em números e tals
 - operadores infix (entre os dois operandos), por isso são operadores binários
@@ -381,13 +385,15 @@ Nan = Not a Number
 - es7 trouxe o ** como exponenciação, tal como no python
 - assim, também funciona **= na atribuição
 
-### operadores relacionais 
+---
+## operadores relacionais 
 
 - resulta sempre em verdadeiro e falso
 - no JS existe como comparar apenas o valor, sem levar em conta se são do mesmo tipo, ou fazer a comparação de modo mais restrita, que leva em conta o tipo
 - mais recomendado usar o estritamente igual para evitar erros difíceis de perceber
 
-### operadores lógicos
+---
+## operadores lógicos
 
 - relembrando a matério de lógica do 1° semestre
 - tabela verdade para o 'e' e 'ou'
@@ -401,7 +407,8 @@ Nan = Not a Number
 - not no JS = !; 
 - xor no JS: usar o !=; outra opção é fazer !!(var1 ^ var2), ou seja, usar o xor bit a bit transformando o resultado em boolean
 
-### operadores unários
+---
+## operadores unários
 
 - já vimos o negação lógica (!) e o (+, - no contexto de sinal)
 - outros operadores unários são o incremento e o decremento
@@ -412,18 +419,20 @@ Nan = Not a Number
 - legibilidade geralmente implica em refatoração, mas buscar escrever de forma clara de primeira é recomendado
 - codigo limpo é melhor que vários comentários
 
-### operadores ternários
+---
+## operadores ternários
 
 - operador ternario funciona com uma expressão relacional seguido por um '?' e dois valores divididos por ':'. O primeiro a esquerda do ':' será retornado se a expressão for true. O segundo caso seja falso
 - um if/else reduzido, quando tem apenas uma linha
 
-### contexto de execução: browser vs node
+---
+## contexto de execução: browser vs node
 
 - importante saber o runtime: se estiver no frontend está executando JS dentro do browser, se for no backend será no Node
 - entender o runtime auxilia a programar JS, pois algumas coisas vão mudar
 - no frontend tem muito asincronismo para chamadas ao backend e é preciso conhecer padrões de projeto 
 
-#### browser 
+### browser 
 
 - no browser tem o Window, que é um objeto global com muitas propriedades, funções... variaveis globais e funções globais eles ficam dentro dele (nesse escopo global )
 - no contexto global this é o window. This muda de acordo com o contexto
@@ -435,7 +444,7 @@ Nan = Not a Number
 - uma das formas de evitar escopo global: usar objetos com o let/const com atributos e funções anonimas. Dentro do objeto, this é o próprio objeto, logo é como numa classe do python, se um método (função do objeto) chamar this.nome, estará procurando o atributo nome dentro de si
 - ao invés de poluir o escopo global com várias variaveis/funções globais, usamos apenas uma que contém muitas outras coisas que não estão no escopo global
  
-#### node 
+### node 
 
 - global é o equivalente ao window
 - this é o mesmo que module.exports ou seja, estaremos exportando para fora do arquivo. Cada arquivo é um modulo
@@ -447,14 +456,15 @@ Nan = Not a Number
 - criar variavel sem const e let coloca a variavel no objeto global, algo que não acontece nem quando se usa o var para declarar variavel (não fazer isso)
 
 
-#### moral da história
+### moral da história
 
 - ter consciência do runtime e das especificidades dos ambientes. 
 - Conhecer principios, formas de se pensar, paradigmas e padrões de projeto. 
 - fugir do escopo global
 
+---
 
-### tratamento de erro (Try/Catch/Throw)
+## tratamento de erro (Try/Catch/Throw)
 
 - bloco try (tenta), catch (ocorreu um erro e agora) e finally (executa se deu erro ou não) 
 - throw: pode ser usado para gerar um erro personalizado (throw new Error ('Minha mensagem de erro')) ou qualquer valor que você quiser, como um inteiro, string ou objeto. Pode ser usado para tratar o erro em uma função, por exemplo
